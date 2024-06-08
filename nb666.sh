@@ -4,10 +4,10 @@
 FILE_TO_UPLOAD="/home/shadeform/.nosana"
 
 # 远程 Mega 目录
-REMOTE_DIR="mega:rtxa6000"
+REMOTE_DIR="在系统上创建的rclone用户名:云盘上的文件夹名称"
 
 # 日志文件路径
-LOG_FILE="/home/shadeform/nb66.log"
+LOG_FILE="/root/nb66.log"
 
 # 无限循环
 while true; do
@@ -22,6 +22,6 @@ while true; do
         echo "$(date): Failed to upload file to Mega." >> "$LOG_FILE"
     fi
 
-    # 每隔10秒运行一次
-    sleep 30
+    # 每隔3600秒运行一次
+    sleep 3600
 done
